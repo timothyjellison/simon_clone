@@ -1,0 +1,344 @@
+/********
+SITE-WIDE
+********/
+
+body {
+  font-size: 100%;
+  height:100%;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  margin: 1em 2em;
+}
+
+p {
+  font-family: 'Neuton', serif;
+  font-size: 4em;
+  margin: 1em 2em;
+}
+
+label {
+  font-size: 3em;
+}
+
+a.light {
+  color: #ddd;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  padding-left: 2em;
+}
+
+/*************
+MAJOR SECTIONS
+*************/
+
+/* JUMBOTRON
+***********/
+
+.jumbotron {
+  background: #ddd url("http://timothyjellison.github.io/images/jumbotron-bg.JPG") center center;
+  background-size: cover;
+  overflow: hidden; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+  height: 300px;
+  width: 100%;
+  margin-right: 0px;
+}
+
+.jumbotron h1 {
+  margin-top: 1em;
+  margin-left: 36px;
+  color: #fff;
+}
+
+.jumbotron small {
+  color: #eee;
+}
+
+.jumbotron .btn-group {
+  margin-top: 1em;
+  margin-left: 36px;
+}
+
+.jumbotron a[type="button"]{
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  margin: 5px 5px;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.jumbotron a[type="button"]:hover{
+  background-color: rgba(200,200,200,0.5);
+  color: white;
+}
+
+/* ABOUT ME
+**********/
+
+.row.about-me {
+  padding-bottom: 4em;
+}
+
+/* WIKIPEDIA SEARCH
+******************/
+
+.row.search-wikipedia, .row.basics {
+  padding-top: 6em;
+  padding-bottom: 1em;
+  background-color: #29749C;
+}
+
+.search-wikipedia p, .row.basics p {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 1em;
+  color: white;
+}
+
+.searchResult a, .searchResult a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.searchmatch {
+  font-weight: bold;
+}
+
+/* TIC-TAC-TOE
+*************/
+
+.row.tic-tac-toe {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.board {
+  height: 32.5em;
+  width: 32.5em;
+  margin-left: 25%;
+  margin-top: 3em;
+}
+
+.block {
+  height: 10em;
+  width: 10em;
+  margin: 0.4em;
+  float: left;
+  border: 1px solid black;
+  transition: 0.75s;
+  background-color: white;
+}
+
+.block:nth-of-type(4), .block:nth-of-type(7) {
+  clear: left;
+}
+
+.tic-tac-toe-description {
+  padding-top: 0em;
+  margin-top: 0em;
+}
+
+.tic-tac-toe-description h1 {
+  color: #000;
+}
+
+/* LINKS AND CONTACT INFO
+************************/
+
+.row.more-links-and-contact {
+  padding-top: 4em;
+  padding-bottom: 1em;
+  background-color: #FFF;
+}
+
+.more-links-and-contact p {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 1em;
+}
+
+/* FOOTER
+********/
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.footer .container {
+  height: 100%;
+}
+
+.footer p {
+  padding: 1em;
+  font-size: 120%;
+}
+
+
+
+/************
+MEDIA QUERIES
+************/
+
+/* BIG SCREENS
+*************/
+
+@media screen and (min-width: 1200px){
+  .jumbotron {
+    height: 600px;
+  }
+
+  .jumbotron a[type="button"]{
+    background-color: transparent;
+    border: 5px solid white;
+    color: white;
+    margin: 10px 10px;
+    padding: 26px;
+    font-size: 20px;
+  }
+}
+
+/* MEDIUM SCREENS
+****************/
+
+@media screen and (max-width: 1200px){
+  .jumbotron {
+    height: 600px;
+  }
+
+  .jumbotron a[type="button"]{
+    border: 5px solid white;
+    margin: 8px 8px;
+    padding: 22px;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0em 0em;
+    padding: 0.5em 0.25em;
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 0em 0em;
+    padding: 0.5em 0.25em;
+  }
+
+  .search-wikipedia p, .tic-tac-toe-description p {
+    line-height: 175%;
+  }
+
+  .board {
+    margin-left: 15%;
+  }
+}
+
+/* SMALL SCREENS
+***************/
+
+@media screen and (max-width: 768px){
+  .jumbotron {
+    height: 400px;
+  }
+
+  .jumbotron h1 {
+    font-size: 52px;
+  }
+
+
+  p {
+    margin: 0em 0em;
+    padding: 0.5em 0.15em;
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 0em 0em;
+    padding: 0.5em 0.15em;
+  }
+
+  .board {
+    height: 27em;
+    width: 27em;
+    margin-left: 10%;
+  }
+
+  .block {
+    height: 8em;
+    width: 8em;
+    margin: 0.4em;
+  }
+
+  .search-wikipedia p, .tic-tac-toe-description p {
+    line-height: 150%;
+  }
+
+  .jumbotron a[type="button"]{
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    margin: 8px 8px;
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+/* EXTRA-SMALL SCREENS
+*********************/
+
+@media screen and (max-width: 430px){
+  .jumbotron h1 {
+    font-size: 36px;
+  }
+
+  small {
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0em;
+    padding: 0em 0.15em;
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 0em 0em;
+    padding: 0em 0.15em;
+  }
+
+  .board {
+    height: 24em;
+    width: 24em;
+    margin-left: 5%;
+  }
+
+  .block {
+    height: 7em;
+    width: 7em;
+    margin: 0.4em;
+  }
+
+  .search-wikipedia p, .tic-tac-toe-description p {
+    line-height: 125%;
+  }
+
+  .jumbotron a[type="button"]{
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    margin: 5px 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
