@@ -48,13 +48,13 @@ MAJOR SECTIONS
   overflow: hidden; 
   font-family: 'Montserrat', sans-serif;
   padding: 0px;
-  height: 300px;
+  height: 100px;
   width: 100%;
   margin-right: 0px;
 }
 
 .jumbotron h1 {
-  margin-top: 1em;
+  margin-top: 0.25em;
   margin-left: 36px;
   color: #fff;
 }
@@ -82,90 +82,6 @@ MAJOR SECTIONS
   color: white;
 }
 
-/* ABOUT ME
-**********/
-
-.row.about-me {
-  padding-bottom: 4em;
-}
-
-/* WIKIPEDIA SEARCH
-******************/
-
-.row.search-wikipedia, .row.basics {
-  padding-top: 6em;
-  padding-bottom: 1em;
-  background-color: #29749C;
-}
-
-.search-wikipedia p, .row.basics p {
-  padding-top: 0;
-  margin-top: 0;
-  padding-bottom: 1em;
-  color: white;
-}
-
-.searchResult a, .searchResult a:hover {
-  color: black;
-  text-decoration: none;
-}
-
-.searchmatch {
-  font-weight: bold;
-}
-
-/* TIC-TAC-TOE
-*************/
-
-.row.tic-tac-toe {
-  padding-top: 4em;
-  padding-bottom: 4em;
-}
-
-.board {
-  height: 32.5em;
-  width: 32.5em;
-  margin-left: 25%;
-  margin-top: 3em;
-}
-
-.block {
-  height: 10em;
-  width: 10em;
-  margin: 0.4em;
-  float: left;
-  border: 1px solid black;
-  transition: 0.75s;
-  background-color: white;
-}
-
-.block:nth-of-type(4), .block:nth-of-type(7) {
-  clear: left;
-}
-
-.tic-tac-toe-description {
-  padding-top: 0em;
-  margin-top: 0em;
-}
-
-.tic-tac-toe-description h1 {
-  color: #000;
-}
-
-/* LINKS AND CONTACT INFO
-************************/
-
-.row.more-links-and-contact {
-  padding-top: 4em;
-  padding-bottom: 1em;
-  background-color: #FFF;
-}
-
-.more-links-and-contact p {
-  padding-top: 0;
-  margin-top: 0;
-  padding-bottom: 1em;
-}
 
 /* FOOTER
 ********/
@@ -196,7 +112,7 @@ MEDIA QUERIES
 
 @media screen and (min-width: 1200px){
   .jumbotron {
-    height: 600px;
+    height: 100px;
   }
 
   .jumbotron a[type="button"]{
@@ -214,7 +130,7 @@ MEDIA QUERIES
 
 @media screen and (max-width: 1200px){
   .jumbotron {
-    height: 600px;
+    height: 100px;
   }
 
   .jumbotron a[type="button"]{
@@ -249,7 +165,7 @@ MEDIA QUERIES
 
 @media screen and (max-width: 768px){
   .jumbotron {
-    height: 400px;
+    height: 100px;
   }
 
   .jumbotron h1 {
