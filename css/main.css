@@ -2,6 +2,9 @@
 SITE-WIDE
 ********/
 
+* {
+  outline: 3px solid red;
+}
 body {
   font-size: 100%;
   height:100%;
@@ -48,9 +51,10 @@ MAJOR SECTIONS
   overflow: hidden; 
   font-family: 'Montserrat', sans-serif;
   padding: 0px;
-  height: 100px;
+  height: 10%;
   width: 100%;
   margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 .jumbotron h1 {
@@ -68,155 +72,19 @@ MAJOR SECTIONS
   margin-left: 36px;
 }
 
-.jumbotron a[type="button"]{
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  margin: 5px 5px;
-  padding: 16px;
-  font-size: 14px;
-}
+/* GAME
+******/
 
-.jumbotron a[type="button"]:hover{
-  background-color: rgba(200,200,200,0.5);
-  color: white;
-}
-
-
-/* FOOTER
-********/
-
-.footer {
-  background-color: #222;
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.footer .container {
-  height: 100%;
-}
-
-.footer p {
-  padding: 1em;
-  font-size: 120%;
-}
-
-
-
-/************
-MEDIA QUERIES
-************/
-
-/* BIG SCREENS
-*************/
-
-@media screen and (min-width: 1200px){
-  .jumbotron {
-    height: 100px;
+  .game {
+    height: 80%;
+    margin-left: -10%;
+    margin-right: 0;
   }
-
-  .jumbotron a[type="button"]{
-    background-color: transparent;
-    border: 5px solid white;
-    color: white;
-    margin: 10px 10px;
-    padding: 26px;
-    font-size: 20px;
-  }
-}
-
-/* MEDIUM SCREENS
-****************/
-
-@media screen and (max-width: 1200px){
-  .jumbotron {
-    height: 100px;
-  }
-
-  .jumbotron a[type="button"]{
-    border: 5px solid white;
-    margin: 8px 8px;
-    padding: 22px;
-    font-size: 18px;
-  }
-
-  p {
-    margin: 0em 0em;
-    padding: 0.5em 0.25em;
-    font-size: 3em;
-  }
-
-  h1 {
-    margin: 0em 0em;
-    padding: 0.5em 0.25em;
-  }
-
-  .search-wikipedia p, .tic-tac-toe-description p {
-    line-height: 175%;
-  }
-
-  .board {
-    margin-left: 15%;
-  }
-}
-
-/* SMALL SCREENS
-***************/
-
-@media screen and (max-width: 768px){
-  .jumbotron {
-    height: 100px;
-  }
-
-  .jumbotron h1 {
-    font-size: 52px;
-  }
-
-
-  p {
-    margin: 0em 0em;
-    padding: 0.5em 0.15em;
-    font-size: 3em;
-  }
-
-  h1 {
-    margin: 0em 0em;
-    padding: 0.5em 0.15em;
-  }
-
-  .board {
-    height: 27em;
-    width: 27em;
-    margin-left: 10%;
-  }
-
-  .block {
-    height: 8em;
-    width: 8em;
-    margin: 0.4em;
-  }
-
-  .search-wikipedia p, .tic-tac-toe-description p {
-    line-height: 150%;
-  }
-
-  .jumbotron a[type="button"]{
-    background-color: transparent;
-    border: 3px solid white;
-    color: white;
-    margin: 8px 8px;
-    padding: 8px;
-    font-size: 16px;
-  }
-}
 
   .display {
-    margin: 0 auto;
-    height: 50px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    margin-bottom: 100px;
+    margin: 0 ;
+    height: 15%;
+    width: 100%;  
     background-color: #aaa;
     position: absolute;
     text-align: center;
@@ -245,17 +113,17 @@ MEDIA QUERIES
     background-color: #c44;
   }
 
-  .container {
+  .casing {
     margin: 0 auto;
-    height: 220px;
-    width: 220px;
-    margin-top: 75px;
+    height: 225px;
+    width: 225px;
+    margin-top: 70px;
     background-color: black;
-    padding: 10px 0px 0px 10px;
+    padding: 8px 0px 0px 8px;
     border-radius: 50%;
   }
 
-  .container div {
+  .casing div {
     float: left;
   }
 
@@ -292,16 +160,90 @@ MEDIA QUERIES
     margin: 0px 0px 0px 0px;
   }
 
+
+/* FOOTER
+********/
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  bottom: 0;
+}
+
+.footer .container {
+  height: 10%
+}
+
+.footer p {
+  padding: 1em;
+  font-size: 120%;
+}
+
+
+
+/************
+MEDIA QUERIES
+************/
+
+/* BIG SCREENS
+*************/
+
+@media screen and (min-width: 1200px){
+
+}
+
+/* MEDIUM SCREENS
+****************/
+
+@media screen and (max-width: 1200px){
+  p {
+    margin: 0em 0em;
+    padding: 0.5em 0.25em;
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 0em 0em;
+    padding: 0.5em 0.25em;
+  }
+}
+
+/* SMALL SCREENS
+***************/
+
+@media screen and (max-width: 768px){
+  .jumbotron {
+    height: 100px;
+  }
+
+  .jumbotron h1 {
+    font-size: 52px;
+  }
+
+  .game {
+    margin-left: -20%;
+  }
+  p {
+    margin: 0em 0em;
+    padding: 0.5em 0.15em;
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 0em 0em;
+    padding: 0.5em 0.15em;
+  }
+}
+
+
 /* EXTRA-SMALL SCREENS
 *********************/
 
 @media screen and (max-width: 430px){
   .jumbotron h1 {
-    font-size: 36px;
-  }
-
-  small {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   p {
@@ -313,30 +255,5 @@ MEDIA QUERIES
   h1 {
     margin: 0em 0em;
     padding: 0em 0.15em;
-  }
-
-  .board {
-    height: 24em;
-    width: 24em;
-    margin-left: 5%;
-  }
-
-  .block {
-    height: 7em;
-    width: 7em;
-    margin: 0.4em;
-  }
-
-  .search-wikipedia p, .tic-tac-toe-description p {
-    line-height: 125%;
-  }
-
-  .jumbotron a[type="button"]{
-    background-color: transparent;
-    border: 3px solid white;
-    color: white;
-    margin: 5px 5px;
-    padding: 5px;
-    font-size: 12px;
   }
 }
