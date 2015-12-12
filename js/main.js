@@ -1,7 +1,10 @@
 $(document).ready(function(){
-	const numberOfLevels = 10;
+	$('#newGame').modal();
+	$('#newGame').on('hidden.bs.modal', function (e) {
+  		startNewGame();
+	});
+	const numberOfLevels = 8;
 	var levels = []; 
-	startNewGame();  
 	var sound1 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
 	var sound2 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
 	var sound3 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
@@ -71,16 +74,21 @@ $(document).ready(function(){
 
 	function youWin() {
 	  // task: build me
-	  alert('You win!');
-	  game.currentLevel = 0;
-	  game.currentStep = 0;
-	  startNewGame();
-	  updateDisplay(1);
+	  $('#win').modal();
+	  $('#win').on('hidden.bs.modal', function(e) {
+		game.currentLevel = 0;
+		game.currentStep = 0;
+		startNewGame();
+	    updateDisplay(1);	  	
+	  });	
 	}
 
 	function youLose() {
-	  alert('Try Again!');
-	  demoLevels();
+	  game.currentStep = 0;
+	  $('#mistake').modal();
+	  $('#mistake').on('hidden.bs.modal', function (e) {
+  		demoLevels();
+	  });
 	}
 
 	function updateDisplay(x){
