@@ -2,9 +2,6 @@
 SITE-WIDE
 ********/
 
-* {
-  outline: 3px solid red;
-}
 body {
   font-size: 100%;
   height:100%;
