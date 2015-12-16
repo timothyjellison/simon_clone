@@ -46,20 +46,20 @@ $(document).ready(function(){
 	function lightUp(color) {
 	  var dotColor = '.' + color;
 	  switch (color){
-	    case 'red': $(dotColor).css('background-color',"#f44"); sound1.play(); break;
-	    case 'blue': $(dotColor).css('background-color',"#46f"); sound2.play(); break;
-	    case 'green': $(dotColor).css('background-color',"#6c0"); sound3.play(); break;
-	    case 'yellow': $(dotColor).css('background-color',"#ee5"); sound4.play(); break;      
+	    case 'red': $(dotColor).toggleClass('red-active'); sound1.play(); break;
+	    case 'blue': $(dotColor).toggleClass('blue-active'); sound2.play(); break;
+	    case 'green': $(dotColor).toggleClass('green-active'); sound3.play(); break;
+	    case 'yellow': $(dotColor).toggleClass('yellow-active'); sound4.play(); break;      
 	  }
 	}
 
 	function dimLight(color) {
 	  var dotColor = '.' + color;
 	  switch (color){
-	    case 'red': $(dotColor).css('background-color',"red"); break;
-	    case 'blue': $(dotColor).css('background-color',"blue"); break;
-	    case 'green': $(dotColor).css('background-color',"green"); break;
-	    case 'yellow': $(dotColor).css('background-color',"yellow"); break;      
+	    case 'red': $(dotColor).toggleClass('red-active'); break;
+	    case 'blue': $(dotColor).toggleClass('blue-active'); break;
+	    case 'green': $(dotColor).toggleClass('green-active'); break;
+	    case 'yellow': $(dotColor).toggleClass('yellow-active'); break;      
 	  }  
 	}
 
@@ -114,8 +114,11 @@ $(document).ready(function(){
 	$('.reset').on('click',function(){
 	  game.currentLevel = 0;
 	  game.currentStep = 0;
-	  startNewGame(); 
 	  updateDisplay(1);
+	  $('#newGame').modal();
+	  $('#newGame').on('hidden.bs.modal', function (e) {
+  	  	startNewGame();
+	  });
 	});
 
 	$('.button').on('click',function(){

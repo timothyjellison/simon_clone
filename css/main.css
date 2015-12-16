@@ -115,7 +115,11 @@ MAJOR SECTIONS
     height: 225px;
     width: 225px;
     margin-top: 70px;
-    background-color: black;
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(#000, #111, #555); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#000, #111, #555); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#000, #111, #555); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#000, #111, #555); /* Standard syntax */
     padding: 8px 0px 0px 8px;
     border-radius: 50%;
   }
@@ -127,34 +131,66 @@ MAJOR SECTIONS
   .red {
     height: 100px;
     width: 100px;
-    background-color: red;
     border-radius: 100px 0px 0px 0px;
+    background: #f00;
+    background: -webkit-linear-gradient(right top, #f00, #b00);
+    background: -o-linear-gradient(bottom right, #f00, #b00); 
+    background: -moz-linear-gradient(bottom right, #f00, #b00);
+    background: linear-gradient(to bottom right, #f00, #b00); 
     margin: 0px 10px 10px 0px;
+  }
+
+  .red-active {
+    background: #f66;
   }
 
   .blue {
     height: 100px;
     width: 100px;
-    background-color: blue;
+    background: #00f;
+    background: -webkit-linear-gradient(left top, #00f, #00b);
+    background: -o-linear-gradient(bottom left, #00f, #00b); 
+    background: -moz-linear-gradient(bottom left, #00f, #00b);
+    background: linear-gradient(to bottom left, #00f, #00b); 
     border-radius: 0px 100px 0px 0px;
     margin: 0px 0px 0px 0px;
+  }
+
+  .blue-active {
+    background: #66f;
   }
 
   .green {
     clear: left;
     height: 100px;
     width: 100px;
-    background-color: green;
+    background: #0d0;
+    background: -webkit-linear-gradient(left top, #0d0, #0a0);
+    background: -o-linear-gradient(bottom left, #0d0, #0a0); 
+    background: -moz-linear-gradient(bottom left, #0d0, #0a0);
+    background: linear-gradient(to bottom left, #0d0, #0a0); 
     border-radius: 0px 0px 0px 100px;
     margin: 0px 10px 0px 0px;
+  }
+
+  .green-active {
+    background: #6d6;
   }
 
   .yellow {
     height: 100px;
     width: 100px;
-    background-color: yellow;
+    background: #ff0;
+    background: -webkit-linear-gradient(left top, #ff0, #bb0);
+    background: -o-linear-gradient(bottom left, #ff0, #bb0); 
+    background: -moz-linear-gradient(bottom left, #ff0, #bb0);
+    background: linear-gradient(to bottom left, #ff0, #bb0); 
     border-radius: 0px 0px 100px 0px;
     margin: 0px 0px 0px 0px;
+  }
+
+  .yellow-active {
+    background: #ff6;
   }
 
 
